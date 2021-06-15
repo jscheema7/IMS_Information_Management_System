@@ -1,0 +1,45 @@
+﻿@page
+@model IMS.Pages.StudentViews.CreateModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h4>Add Student</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6 font-weight-bold">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Student.Name" class="control-label"></label>
+                <input asp-for="Student.Name" class="form-control" placeholder="Enter Name"/>
+                <span asp-validation-for="Student.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Contact" class="control-label"></label>
+                <input asp-for="Student.Contact" class="form-control" placeholder="Enter Contact"/>
+                <span asp-validation-for="Student.Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Course" class="control-label"></label>
+                <input asp-for="Student.Course" class="form-control" placeholder="Enter Course"/>
+                <span asp-validation-for="Student.Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.RollNo" class="control-label"></label>
+                <input asp-for="Student.RollNo" class="form-control" placeholder="Enter RollNo"/>
+                <span asp-validation-for="Student.RollNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-page="Index" type="button" class="btn btn-info">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

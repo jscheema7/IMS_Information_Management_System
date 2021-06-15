@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IMS_Information_Management_System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand text-light" asp-area="" asp-page="/Index">IMS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 font-weight-bold">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/CourseViews/Index">Course</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/StudentViews/Index">Student</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/ContactUsViews/Index">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <img src="~/images/ims4.jpg" alt="Microsoft Azure" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    <ul style="font-size:22px">
+                        <li>
+                            IMS, is a database and transaction management system that provides an interface for users to access information in various databases via on-line transactions. The IMS/TM (Transaction Manager) is a message-based transaction processor, that handles the execution of specific business application programs.
+                        </li>
+                        <li>
+                            The DB (Database) is an entirely separate component providing access to the IMS hierarchical database for applications running under the IMS/TM, as well as IMS transaction monitor and OS/390 batch jobs.
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-light text-muted bg-primary">
+        <div class="container text-light">
+            &copy; 2021 - IMS_Information_Management_System
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@page
+@model IMS.Pages.ContactUsViews.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <h4>Contact Us</h4>
+    <hr />
+    <table class="table table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Message)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Message)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ContactUs.id"  type="button" class="btn btn-dark">Edit</a>
+    <a asp-page="./Index"  type="button" class="btn btn-info">Back to List</a>
+</div>
